@@ -1525,8 +1525,8 @@ namespace sigslot {
 	public:
 		_connection0()
 		{
-			this->pobject = NULL;
-			this->pmemfun = NULL;
+			m_pobject = NULL;
+			m_pmemfun = NULL;
 		}
         
 		_connection0(dest_type* pobject, void (dest_type::*pmemfun)())
@@ -1566,8 +1566,8 @@ namespace sigslot {
 	public:
 		_connection1()
 		{
-			this->pobject = NULL;
-			this->pmemfun = NULL;
+			m_pobject = NULL;
+			m_pmemfun = NULL;
 		}
         
 		_connection1(dest_type* pobject, void (dest_type::*pmemfun)(arg1_type))
@@ -1607,8 +1607,8 @@ namespace sigslot {
 	public:
 		_connection2()
 		{
-			this->pobject = NULL;
-			this->pmemfun = NULL;
+			m_pobject = NULL;
+			m_pmemfun = NULL;
 		}
         
 		_connection2(dest_type* pobject, void (dest_type::*pmemfun)(arg1_type,
@@ -1649,8 +1649,8 @@ namespace sigslot {
 	public:
 		_connection3()
 		{
-			this->pobject = NULL;
-			this->pmemfun = NULL;
+			m_pobject = NULL;
+			m_pmemfun = NULL;
 		}
         
 		_connection3(dest_type* pobject, void (dest_type::*pmemfun)(arg1_type,
@@ -1693,8 +1693,8 @@ namespace sigslot {
 	public:
 		_connection4()
 		{
-			this->pobject = NULL;
-			this->pmemfun = NULL;
+			m_pobject = NULL;
+			m_pmemfun = NULL;
 		}
         
 		_connection4(dest_type* pobject, void (dest_type::*pmemfun)(arg1_type,
@@ -1739,8 +1739,8 @@ namespace sigslot {
 	public:
 		_connection5()
 		{
-			this->pobject = NULL;
-			this->pmemfun = NULL;
+			m_pobject = NULL;
+			m_pmemfun = NULL;
 		}
         
 		_connection5(dest_type* pobject, void (dest_type::*pmemfun)(arg1_type,
@@ -1789,8 +1789,8 @@ namespace sigslot {
 	public:
 		_connection6()
 		{
-			this->pobject = NULL;
-			this->pmemfun = NULL;
+			m_pobject = NULL;
+			m_pmemfun = NULL;
 		}
         
 		_connection6(dest_type* pobject, void (dest_type::*pmemfun)(arg1_type,
@@ -1839,8 +1839,8 @@ namespace sigslot {
 	public:
 		_connection7()
 		{
-			this->pobject = NULL;
-			this->pmemfun = NULL;
+			m_pobject = NULL;
+			m_pmemfun = NULL;
 		}
         
 		_connection7(dest_type* pobject, void (dest_type::*pmemfun)(arg1_type,
@@ -1890,8 +1890,8 @@ namespace sigslot {
 	public:
 		_connection8()
 		{
-			this->pobject = NULL;
-			this->pmemfun = NULL;
+			m_pobject = NULL;
+			m_pmemfun = NULL;
 		}
         
 		_connection8(dest_type* pobject, void (dest_type::*pmemfun)(arg1_type,
