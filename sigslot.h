@@ -531,6 +531,9 @@ namespace sigslot {
 		}
 	};
     
+    template <typename... Args>
+    using signal_d = signal<SIGSLOT_DEFAULT_MT_POLICY, Args...>;
+    
 }; // namespace sigslot
 
 #endif // SIGSLOT_H__

@@ -24,8 +24,8 @@ public:
 
 void test() {
     Car car;
-    signal<SIGSLOT_DEFAULT_MT_POLICY, double> Speed;
-    signal<SIGSLOT_DEFAULT_MT_POLICY, bool, bool> Brakes;
+    signal_d<double> Speed;
+    signal_d<bool, bool> Brakes;
     Speed.connect(&car, &Car::OnSpeedChange);
     Brakes.connect(&car, &Car::OnBrakesApplied);
 
