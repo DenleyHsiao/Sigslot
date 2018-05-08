@@ -107,15 +107,9 @@ namespace sigslot {
 	class single_threaded
 	{
 	public:
-		single_threaded()
-		{
-			;
-		}
+		single_threaded() = default;
         
-		virtual ~single_threaded()
-		{
-			;
-		}
+		virtual ~single_threaded() = default;
         
 		void lock()
 		{
@@ -215,15 +209,9 @@ namespace sigslot {
 			pthread_mutex_init(get_mutex(), nullptr);
 		}
         
-		multi_threaded_global(const multi_threaded_global&)
-		{
-			;
-		}
+		multi_threaded_global(const multi_threaded_global&) = default;
         
-		virtual ~multi_threaded_global()
-		{
-			;
-		}
+		virtual ~multi_threaded_global() = default;
         
 		void lock()
 		{
@@ -301,7 +289,7 @@ namespace sigslot {
 	class _connection_base
 	{
 	public:
-        virtual ~_connection_base() { }
+        virtual ~_connection_base() = default;
 		virtual has_slots<mt_policy>* getdest() const = 0;
 		virtual void emit(Args... args) = 0;
 		virtual _connection_base<mt_policy, Args...>* clone() = 0;
@@ -323,10 +311,7 @@ namespace sigslot {
 		typedef typename std::set<_signal_base<mt_policy> *> sender_set;
         
 	public:
-		has_slots()
-		{
-			;
-		}
+		has_slots() = default;
         
 		has_slots(const has_slots& hs) : mt_policy(hs)
 		{
@@ -375,10 +360,7 @@ namespace sigslot {
 	{
 	public:
 		typedef typename std::list<_connection_base<mt_policy, Args...> *>  connections_list;
-		_signal()
-		{
-			;
-		}
+		_signal() = default;
         
 		_signal(const _signal<mt_policy, Args...>& s) : _signal_base<mt_policy>(s)
 		{
@@ -497,10 +479,7 @@ namespace sigslot {
 	class signal : public _signal<mt_policy, Args...>
 	{
 	public:
-		signal()
-		{
-			;
-		}
+		signal() = default;
         
 		signal(const signal<mt_policy, Args...>& s) : _signal<mt_policy>(s)
 		{
