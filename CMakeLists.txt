@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 2.6)
 
-set(PROJ_NAME SigSlotTest)
-project (${PROJ_NAME} LANGUAGES CXX)
-
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-add_executable(${PROJ_NAME} test.cpp)
+SET(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules)
+find_package(CppUnitLite)
+if (CppUnitLite_FOUND)
+    add_subdirectory(test)
+else (CppUnitLite_FOUND)
+   MESSAGE(SEND_ERROR "Could not find CppUnitLite library, please visit https://github.com/denleyhsiao/CppUnitLite ...")    
+endif (CppUnitLite_FOUND)
