@@ -438,16 +438,9 @@ namespace sigslot {
 	class _connection : public _connection_base<mt_policy, Args...>
 	{
 	public:
-		_connection()
-		{
-			m_pobject = nullptr;
-			m_pmemfun = nullptr;
-		}
-        
 		_connection(dest_type* pobject, void (dest_type::*pmemfun)(Args...))
+			: m_pobject(pobject), m_pmemfun(pmemfun)
 		{
-			m_pobject = pobject;
-			m_pmemfun = pmemfun;
 		}
         
 		virtual _connection_base<mt_policy, Args...>* clone()
@@ -469,7 +462,7 @@ namespace sigslot {
 		{
 			return m_pobject;
 		}
-        
+	
 	private:
 		dest_type* m_pobject;
 		void (dest_type::* m_pmemfun)(Args...);
